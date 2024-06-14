@@ -24,6 +24,17 @@ function sendForm() {
     }, 5000);
 }
 
+/*-----------menu------------------*/
+
+function toggleMenu() {
+    const navLinks = document.getElementById('nav-links');
+    if (navLinks.style.display === 'flex') {
+        navLinks.style.display = 'none';
+    } else {
+        navLinks.style.display = 'flex';
+    }
+}
+
 
 /* ------BANNER--------------*/
 
@@ -56,9 +67,9 @@ document.addEventListener('DOMContentLoaded', () => {
 /*------ dinâmica do background header ---------*/
 
 window.addEventListener('scroll', function() {
-    var header = document.querySelector('header');
-    var banner = document.querySelector('.banner');
-    var scrollPosition = window.scrollY;
+    const header = document.querySelector('header');
+    const banner = document.querySelector('.banner');
+    const scrollPosition = window.scrollY;
 
     if (scrollPosition > banner.offsetHeight) {
         header.style.backgroundColor = 'rgba(0, 0, 0, 0.7)'; // Cor original do header quando não estiver sobre o banner

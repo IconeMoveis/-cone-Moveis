@@ -5,11 +5,10 @@ body, html {
 }
 
 header {
-        
     position: fixed;
     width: 100%;
     z-index: 1000;
-    transition: background-color 0.3s ease; /* Adiciona transição para a mudança de cor de fundo */
+    transition: background-color 0.3s ease;
 }
 
 .navbar {
@@ -43,7 +42,6 @@ header {
 }
 
 .nav-links a {
-    
     letter-spacing: 6px;
     color: #c7c4c4;
     text-decoration: none;
@@ -53,13 +51,13 @@ header {
     font-weight: 700;
     font-size: 13px;
     padding: 8px 10px;
-    transition: color 0.3s ease; /* Adiciona transição suave para a cor */
+    transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-    color: #CC8E48; /* Altera a cor ao passar o mouse */
-    text-shadow: 0px 3px 9px rgb(255, 157, 44); /* Adiciona uma sombra brilhante nas letras */
-    transition: color 0.3s ease, text-shadow 0.3s ease; /* Adiciona transições suaves */
+    color: #CC8E48;
+    text-shadow: 0px 3px 9px rgb(255, 157, 44);
+    transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
 .nav-links .dropdown {
@@ -76,12 +74,54 @@ header {
     display: block;
 }
 
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.menu-icon div {
+    width: 35px;
+    height: 5px;
+    background-color: #dd9332;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.87);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        text-align: center;
+         margin-top: 25px;
+    }
+    .navbar {
+        background-color: rgba(0, 0, 0, 0.8);
+
+    }
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .menu-icon {
+        display: flex;
+        
+    }
+  
+}
+
+
 .banner {
     width: 100%;
     height: 100vh; /* Preenche toda a altura da tela */
     overflow: hidden;
-    position: relative;
-    
+    position: relative;    
 }
 
 
@@ -160,12 +200,80 @@ header {
     background-color: #a16900;
 }
 
+@media screen and (max-width: 768px) {
+       
+    
+    main {
+        margin-top: -400px ;
+    }
+    
+    
+    .banner-slide {
+        margin-top: -154px;
+        display: flex;
+        justify-content: center; /* Centraliza horizontalmente */
+        align-items: center; /* Centraliza verticalmente */
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: opacity 0.9s ease-in-out;
+    }
+    .banner-text {
+        font-family: "Montserrat";       
+        position: absolute;             
+        transform: translate(-50%, -50%); 
+        background-color: rgba(0, 0, 0, 0);
+        color: #fff;
+        padding: 10px 20px;
+        text-align: center;
+        text-shadow: 2px 2px #253737;
+        letter-spacing: 1px;
+        font-size: 32px;
+    }
+    .btn-contact {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        display: block;  
+        margin-top:10px; 
+        letter-spacing: 1px;    
+        padding: 10px 20px;   
+        color: #e7e7e7;
+        text-decoration: none;
+        border-radius: 5px;
+        width: 110px;
+        height: 28px; 
+        margin-left: auto; 
+        margin-right: auto; 
+        border-radius: 100px;
+        background: #CC8E48;
+        border: 2px solid rgb(255, 201, 51);
+        display: flex;
+        justify-content: center; 
+        align-items: center; 
+        font-size: 10px;    
+    }
 
+} 
 
+/*--------------whatsapp---------------*/
 
+.whatsapp-icon {
+    position: fixed;
+    bottom: 420px;
+    right: 40px;
+    z-index: 1000;
+}
 
+.whatsapp-icon img {
+    width: 50px;
+    height: 50px;
+    border-radius: 10%;    
+    
+}
 
-
+.whatsapp-icon img:hover {
+    transform: scale(2.1);
+}
 
 
 /*------------------------------------------------*/
@@ -272,7 +380,7 @@ header {
 .carrocel {
     display: flex;
     overflow: hidden; /* Oculta o excesso de conteúdo horizontalmente */
-    height: 400px;
+    height: 300px;
     width: 75vw; /* Largura total da viewport */
     position: relative;
     box-shadow: 1px 1px 19px rgba(0, 0, 0, 0.87);
@@ -460,7 +568,55 @@ textarea.form-control {
         width: 100%;
     }
 }
-
+/*------------------------------*/
+               
+/* Estilos específicos para cada ícone */
+.social-icons {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .social-icons li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  /* Estilos específicos para cada ícone */
+  .facebook-icon {
+    background-image: url('https://cdn.jsdelivr.net/npm/simple-icons/icons/facebook.svg');
+    width: 32px;
+    height: 32px;
+    background-size: cover;
+  }
+  
+  .instagram-icon {
+    background-image: url('https://cdn.jsdelivr.net/npm/simple-icons/icons/instagram.svg');
+    width: 32px;
+    height: 32px;
+    background-size: cover;
+  }
+  
+  .pinterest-icon {
+    background-image: url('https://cdn.jsdelivr.net/npm/simple-icons/icons/pinterest.svg');
+    width: 32px;
+    height: 32px;
+    background-size: cover;
+  }
+  
+  .tiktok-icon {
+    background-image: url('https://cdn.jsdelivr.net/npm/simple-icons/icons/tiktok.svg');
+    width: 32px;
+    height: 32px;
+    background-size: cover;
+  }
+  
+  .youtube-icon {
+    background-image: url('https://cdn.jsdelivr.net/npm/simple-icons/icons/youtube.svg');
+    width: 32px;
+    height: 32px;
+    background-size: cover;
+  }
 
 #stores {  
     display: flex; /* Usa flexbox para alinhar os itens */
@@ -468,29 +624,56 @@ textarea.form-control {
     align-items: center; /* Alinha os itens verticalmente ao centro */
     padding: 20px;   
     background-color: #F2F2F2;   
+    flex-wrap: wrap; /* Permite que os itens se movam para a próxima linha se não houver espaço suficiente */
 }
 .store1, .store {
-    flex: 1; /* Faz com que os itens ocupem a mesma quantidade de espaço */
-    margin: 0 10px; /* Margem entre os itens */
+    flex: 1 1 300px; /* Faz com que os itens ocupem o mesmo espaço e possam encolher ou crescer conforme necessário */
+    margin: 10px; /* Margem entre os itens */
     padding: 10px; /* Preenchimento interno dos itens */
-    /* Outros estilos opcionais */
+    box-sizing: border-box; /* Inclui padding e borda na largura e altura total */
+    /* Define uma largura mínima para os itens */
+    min-width: 200px; /* Largura mínima para manter o layout responsivo */
+    max-width: 100%; /* Garante que o item não exceda a largura do contêiner */
+   
 }
 
 .store {
-    text-align: center;
-    align-items: center;
-    
+      box-shadow: 1px 1px 9px rgba(73, 72, 72, 0.144);
+      border-radius: 5px;
 }
-.store1 {
-    
+
+.store, .store1 {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .store h3 {
     font-size: 1.2em;
     color: #333;
-   
+    
 }
 
+/* Media queries para telas menores */
+@media (max-width: 768px) {
+    #stores {
+        flex-direction: column; /* Empilha os itens verticalmente */
+        align-items: stretch; /* Faz os itens ocuparem toda a largura disponível */
+    }
+    .store1, .store {
+        margin: 10px; /* Remove margem lateral e adiciona margem vertical */
+        max-width: 100%;
+        max-height: 100%;
+        overflow: auto; /* Permite a rolagem se o conteúdo exceder a div */
+        box-sizing: border-box; /* Inclui padding e border no cálculo do tamanho da div */
+    }
+}
+
+
+
 footer {
+    max-height: 40px;
     background-color: #333333;
     color: #fff;
     text-align: center;
